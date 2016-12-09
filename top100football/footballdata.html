@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.min.js"></script>
+	<!-- scatter.js scripts-->
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	
+	<title> Income for Top 100 NFL Players</title>
+	<style>
+	     #head{
+		   background-color: #333;
+		   color: white;
+		   width: 1000px;
+		 
+		 }
+		 #footer{
+		 
+		 
+		 }
+		 body{
+		 font-family: 'Shadows Into Light', cursive;
+		 font-size: 16px;
+		 
+		 }
+		 th,td {
+			width: 430px;
+			height: 70px;
+			border: solid 2px #333;
+		 }
+		 th {
+			font-weight: 900;
+		 }
+	
+	</style>
+	<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+	</head>
+	
+	<body>
+	<header>
+		<h1>  This webpage depicts data for </h1>
+	</header>
+
+		<div id="output"></div>
+        <div id="container" style="min-width: 310px; height: 400px; max-width: 800px; margin: 0 auto"></div><!-- scatter.js container -->
+	<footer>
+
+	</footer>
+	<script src="player.js"></script>
+	<script src="scatter.js"></script> <!-- scatter.js source-->
+	<script>
+
+
+var output ="";
+var output = "<table>" + "<tr>" +"<th> Player Name </th>" + "<th> Age </th>" + "<th> Position </th>" + "<th> Income </th>" + "</tr>"; 
+for(var x = 0; x < data.length; x++){
+       var player = data[x].Player;
+       var age = data[x].Age;
+       var position = data[x].Position;
+	   var income = data[x].Income;
+
+output += '<tr>' + '<td>' + player + '</td>' + '<td>' + age + '</td>' + '<td>' + position + '</td>' + '<td>' + '$' + income.toFixed(2) + '</td>' +'</tr>';
+/** Switched out all the variable names and added a couple in the output **/ 
+
+
+
+}
+output += "</table>";
+
+
+document.getElementById('output').innerHTML = output;
+
+</script>
+		<canvas id="myChart" width="400" height="400"></canvas>
+<script>
+var ctx = document.getElementById("myChart");
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: (function(){
+               var arr = ["QB", "RB", "WR", "TE", "G", "LT", "RT", "FS", "CB", "OLB", "ILB", "DE", "DT"];
+               /*for(var i=0; i<0; i++){
+                   arr.push(data[i].Position);/**swtiched institution to player**/
+               
+			   /**for(var x=0; x < qb.length; x++){
+					var sum = 0
+					sum = qb[x] + sum;
+					var qbAverage = sum / qb.length
+			   }       
+                   
+               }*/
+               return arr;
+           })()
+		
+		/**[data[0].Player, data[1].Player, data[2].Player, data[3].Player, data[4].Player, data[5].Player, data[6].Player, data[7].Player, data[8].Player, data[9].Player]**/,
+        datasets: [{
+            label: 'Average Income for Top 100 Players in the NFL',
+            data: [data[0].Income, data[1].Income, data[2].Income, data[3].Income, data[4].Income, data[5].Income, data[6].Income, data[7].Income, data[8].Income, data[9].Income, data[10].Income, data[11].Income, data[12].Income],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script>
+
+
+
+
+	</body>
+</html>

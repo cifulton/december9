@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+	</head>
+	<body>
+	
+	
+	<h2 id="output"></h2>
+	
+	
+	
+	<script>
+	var data = [
+  {
+    "Player": "Andrew Luck",
+    "Age": 27,
+    "Position": "QB",
+    "Income": 24594000
+  },
+  {
+    "Player": "Carson Palmer",
+    "Age": 36,
+    "Position": "QB",
+    "Income": 24350000
+  },
+  {
+    "Player": "Drew Brees",
+    "Age": 37,
+    "Position": "QB",
+    "Income": 24250000
+  },
+  {
+    "Player": "Joe Flacco",
+    "Age": 31,
+    "Position": "QB",
+    "Income": 22133333
+  },
+  {
+    "Player": "Aaron Rodgers",
+    "Age": 32,
+    "Position": "QB",
+    "Income": 22000000
+  },
+  {
+    "Player": "Russell Wilson",
+    "Age": 27,
+    "Position": "QB",
+    "Income": 21900000
+  },
+  {
+    "Player": "Ben Roethlisberger",
+    "Age": 34,
+    "Position": "QB",
+    "Income": 21850000
+  },
+  {
+    "Player": "Eli Manning",
+    "Age": 35,
+    "Position": "QB",
+    "Income": 21000000
+  },
+  {
+    "Player": "Philip Rivers",
+    "Age": 34,
+    "Position": "QB",
+    "Income": 20812500
+  },
+  {
+    "Player": "Cam Newton",
+    "Age": 27,
+    "Position": "QB",
+    "Income": 20760000
+  },
+  {
+    "Player": "Matt Ryan",
+    "Age": 31,
+    "Position": "QB",
+    "Income": 20750000
+  },
+  {
+    "Player": "Tom Brady",
+    "Age": 39,
+    "Position": "QB",
+    "Income": 20500000
+  },
+  {
+    "Player": "Kirk Cousins",
+    "Age": 28,
+    "Position": "QB",
+    "Income": 19953000
+  },
+  {
+    "Player": "Ryan Tannehill",
+    "Age": 28,
+    "Position": "QB",
+    "Income": 19250000
+  },
+  {
+    "Player": "Von Miller",
+    "Age": 27,
+    "Position": "OLB",
+    "Income": 19083333
+  },
+  {
+    "Player": "Ndamukong Suh",
+    "Age": 29,
+    "Position": "DT",
+    "Income": 19062500
+  },
+  {
+    "Player": "Colin Kaepernick",
+    "Age": 28,
+    "Position": "QB",
+    "Income": 19000000
+  },
+  {
+    "Player": "Jay Cutler",
+    "Age": 33,
+    "Position": "QB",
+    "Income": 18100000
+  },
+  {
+    "Player": "Brock Osweiler",
+    "Age": 25,
+    "Position": "QB",
+    "Income": 18000000
+  },
+  {
+    "Player": "Tyrod Taylor",
+    "Age": 27,
+    "Position": "QB",
+    "Income": 18000000
+  },
+  {
+    "Player": "Tony Romo",
+    "Age": 36,
+    "Position": "QB",
+    "Income": 18000000
+  },
+  {
+    "Player": "Matthew Stafford",
+    "Age": 28,
+    "Position": "QB",
+    "Income": 17666667
+  },
+  {
+    "Player": "Sam Bradford",
+    "Age": 28,
+    "Position": "QB",
+    "Income": 17500000
+  },
+  {
+    "Player": "Muhammad Wilkerson",
+    "Age": 27,
+    "Position": "DE",
+    "Income": 17200000
+  },
+  {
+    "Player": "Fletcher Cox",
+    "Age": 25,
+    "Position": "DT",
+    "Income": 1710000
+  },
+  {
+    "Player": "Oliver Vernon",
+    "Age": 26,
+    "Position": "DE",
+    "Income": 17000000
+  },
+  {
+    "Player": "Alex Smith",
+    "Age": 32,
+    "Position": "QB",
+    "Income": 17000000
+  },
+  {
+    "Player": "Justin Houston",
+    "Age": 27,
+    "Position": "OLB",
+    "Income": 16833333
+  },
+  {
+    "Player": "J.J. Watt",
+    "Age": 27,
+    "Position": "DE",
+    "Income": 16667571
+  },
+  {
+    "Player": "Marcell Dareus",
+    "Age": 26,
+    "Position": "DT",
+    "Income": 16095686
+  },
+  {
+    "Player": "Andy Dalton",
+    "Age": 29,
+    "Position": "QB",
+    "Income": 16000000
+  },
+  {
+    "Player": "Gerald McCoy",
+    "Age": 28,
+    "Position": "DT",
+    "Income": 15866667
+  },
+  {
+    "Player": "Josh Norman",
+    "Age": 28,
+    "Position": "CB",
+    "Income": 15000000
+  },
+  {
+    "Player": "A.J. Green",
+    "Age": 28,
+    "Position": "WR",
+    "Income": 15000000
+  },
+  {
+    "Player": "Alshon Jeffery",
+    "Age": 26,
+    "Position": "WR",
+    "Income": 14999000
+  },
+  {
+    "Player": "Robert Quinn",
+    "Age": 26,
+    "Position": "DE",
+    "Income": 14599000
+  },
+  {
+    "Player": "Julio Jones",
+    "Age": 27,
+    "Position": "WR",
+    "Income": 14251209
+  },
+  {
+    "Player": "Malik Jackson",
+    "Age": 26,
+    "Position": "DT",
+    "Income": 14250000
+  },
+  {
+    "Player": "Darrelle Revis",
+    "Age": 31,
+    "Position": "CB",
+    "Income": 14024212
+  },
+  {
+    "Player": "Patrick Peterson",
+    "Age": 26,
+    "Position": "CB",
+    "Income": 14010000
+  },
+  {
+    "Player": "Richard Sherman",
+    "Age": 28,
+    "Position": "CB",
+    "Income": 14000000
+  },
+  {
+    "Player": "Adrian Peterson",
+    "Age": 31,
+    "Position": "RB",
+    "Income": 14000000
+  },
+  {
+    "Player": "Dez Bryant",
+    "Age": 27,
+    "Position": "WR",
+    "Income": 14000000
+  },
+  {
+    "Player": "Demaryius Thomas",
+    "Age": 28,
+    "Position": "WR",
+    "Income": 14000000
+  },
+  {
+    "Player": "Trumaine Johnson",
+    "Age": 26,
+    "Position": "CB",
+    "Income": 13952000
+  },
+  {
+    "Player": "Trent Williams",
+    "Age": 28,
+    "Position": "LT",
+    "Income": 13600000
+  },
+  {
+    "Player": "Joe Haden",
+    "Age": 27,
+    "Position": "CB",
+    "Income": 13500000
+  },
+  {
+    "Player": "Clay Matthews",
+    "Age": 30,
+    "Position": "ILB",
+    "Income": 13200000
+  },
+  {
+    "Player": "Terron Armstead",
+    "Age": 25,
+    "Position": "LT",
+    "Income": 13000000
+  },
+  {
+    "Player": "T.Y Hilton",
+    "Age": 26,
+    "Position": "WR",
+    "Income": 13000000
+  },
+  {
+    "Player": "Janoris Jenkins",
+    "Age": 28,
+    "Position": "CB",
+    "Income": 12500000
+  },
+  {
+    "Player": "Tyrann Mathieu",
+    "Age": 24,
+    "Position": "FS",
+    "Income": 12500000
+  },
+  {
+    "Player": "Luke Kuechly",
+    "Age": 25,
+    "Position": "ILB",
+    "Income": 12500000
+  },
+  {
+    "Player": "Tyron Smith",
+    "Age": 25,
+    "Position": "LT",
+    "Income": 12200000
+  },
+  {
+    "Player": "Darius Slay",
+    "Age": 25,
+    "Position": "CB",
+    "Income": 12037500
+  },
+  {
+    "Player": "David Bakhtiari",
+    "Age": 25,
+    "Position": "LT",
+    "Income": 12000000
+  },
+  {
+    "Player": "Cordy Glenn",
+    "Age": 27,
+    "Position": "LT",
+    "Income": 12000000
+  },
+  {
+    "Player": "Eric Fisher",
+    "Age": 25,
+    "Position": "LT",
+    "Income": 12000000
+  },
+  {
+    "Player": "Ryan Fitzpatrick",
+    "Age": 33,
+    "Position": "QB",
+    "Income": 12000000
+  },
+  {
+    "Player": "Kelechi Osemele",
+    "Age": 27,
+    "Position": "G",
+    "Income": 11700000
+  },
+  {
+    "Player": "Doug Baldwin",
+    "Age": 28,
+    "Position": "WR",
+    "Income": 11500000
+  },
+  {
+    "Player": "Ryan Kerrigan",
+    "Age": 28,
+    "Position": "OLB",
+    "Income": 11500000
+  },
+  {
+    "Player": "Joe Thomas",
+    "Age": 31,
+    "Position": "LT",
+    "Income": 11500000
+  },
+  {
+    "Player": "Lane Johnson",
+    "Age": 26,
+    "Position": "RT",
+    "Income": 11252000
+  },
+  {
+    "Player": "Keenan Allen",
+    "Age": 24,
+    "Position": "WR",
+    "Income": 11250000
+  },
+  {
+    "Player": "Vincent Jackson",
+    "Age": 33,
+    "Position": "WR",
+    "Income": 11111111
+  },
+  {
+    "Player": "Michael Brockers",
+    "Age": 25,
+    "Position": "DT",
+    "Income": 11041667
+  },
+  {
+    "Player": "Calais Campbell",
+    "Age": 30,
+    "Position": "DE",
+    "Income": 11000000
+  },
+  {
+    "Player": "Cameron Jordan",
+    "Age": 27,
+    "Position": "DE",
+    "Income": 11000000
+  },
+  {
+    "Player": "Emmanuel Sanders",
+    "Age": 29,
+    "Position": "WR",
+    "Income": 11000000
+  },
+  {
+    "Player": "Jeremy Maclin",
+    "Age": 28,
+    "Position": "WR",
+    "Income": 11000000
+  },
+  {
+    "Player": "Larry Fitzgerald",
+    "Age": 33,
+    "Position": "WR",
+    "Income": 11000000
+  },
+  {
+    "Player": "Anthony Castonzo",
+    "Age": 28,
+    "Position": "LT",
+    "Income": 10953000
+  },
+  {
+    "Player": "Eric Berry",
+    "Age": 27,
+    "Position": "FS",
+    "Income": 10806000
+  },
+  {
+    "Player": "Bobby Wagner",
+    "Age": 26,
+    "Position": "ILB",
+    "Income": 10750000
+  },
+  {
+    "Player": "Geno Atkins",
+    "Age": 28,
+    "Position": "DT",
+    "Income": 10665400
+  },
+  {
+    "Player": "Russell Okung",
+    "Age": 29,
+    "Position": "LT",
+    "Income": 10600000
+  },
+  {
+    "Player": "Tavon Austin",
+    "Age": 25,
+    "Position": "WR",
+    "Income": 10500000
+  },
+  {
+    "Player": "Navorro Bowman",
+    "Age": 28,
+    "Position": "ILB",
+    "Income": 10500000
+  },
+  {
+    "Player": "Byron Maxwell",
+    "Age": 28,
+    "Position": "CB",
+    "Income": 10500000
+  },
+  {
+    "Player": "Jason Peters",
+    "Age": 34,
+    "Position": "LT",
+    "Income": 10325000
+  },
+  {
+    "Player": "Jimmy Smith",
+    "Age": 28,
+    "Position": "CB",
+    "Income": 10275500
+  },
+  {
+    "Player": "Corey Liuget",
+    "Age": 26,
+    "Position": "DT",
+    "Income": 10250000
+  },
+  {
+    "Player": "Harrison Smith",
+    "Age": 27,
+    "Position": "FS",
+    "Income": 10250000
+  },
+  {
+    "Player": "Mike Daniels",
+    "Age": 27,
+    "Position": "DE",
+    "Income": 10250000
+  },
+  {
+    "Player": "Allen Hurns",
+    "Age": 24,
+    "Position": "WR",
+    "Income": 10162500
+  },
+  {
+    "Player": "Lavonte David",
+    "Age": 26,
+    "Position": "OLB",
+    "Income": 10050000
+  },
+  {
+    "Player": "Nate Solder",
+    "Age": 28,
+    "Position": "LT",
+    "Income": 10031000
+  },
+  {
+    "Player": "Brandon Carr",
+    "Age": 30,
+    "Position": "CB",
+    "Income": 10020000
+  },
+  {
+    "Player": "Kyle Long",
+    "Age": 27,
+    "Position": "G",
+    "Income": 10000000
+  },
+  {
+    "Player": "Randall Cobb",
+    "Age": 26,
+    "Position": "WR",
+    "Income": 10000000
+  },
+  {
+    "Player": "Demarcus Ware",
+    "Age": 34,
+    "Position": "OLB",
+    "Income": 10000000
+  },
+  {
+    "Player": "Jason Pierre-Paul",
+    "Age": 27,
+    "Position": "DE",
+    "Income": 10000000
+  },
+  {
+    "Player": "Jimmy Graham",
+    "Age": 29,
+    "Position": "TE",
+    "Income": 10000000
+  },
+  {
+    "Player": "David DeCastro",
+    "Age": 26,
+    "Position": "G",
+    "Income": 10000000
+  },
+  {
+    "Player": "Earl Thomas",
+    "Age": 27,
+    "Position": "FS",
+    "Income": 10000000
+  },
+  {
+    "Player": "Cameron Heyward",
+    "Age": 27,
+    "Position": "DE",
+    "Income": 9866667
+  },
+  {
+    "Player": "Jordy Nelson",
+    "Age": 31,
+    "Position": "WR",
+    "Income": 9762500
+  },
+  {
+    "Player": "Sam Shields",
+    "Age": 28,
+    "Position": "CB",
+    "Income": 9750000
+  },
+  {
+    "Player": "Lawrence Timmons",
+    "Age": 30,
+    "Position": "ILB",
+    "Income": 9559150
+  }
+]
+
+
+
+
+
+getQuarterBackAverage();  
+function getQuarterBackAverage(){
+	var position = [];
+	var income = [];
+
+	for(var x = 0; x < data.length; x++){
+	
+		position.push(data[x].Position);
+		income.push(data[x].Income);
+	
+	}
+	
+	
+	//DECLARATIONS
+		var getTotalIncome =0;
+		var getAverage;
+		var getTotal = 0;
+
+	for(var i = 0; i < position.length; i++){
+		
+		if(position[i] == "QB"){
+			getTotalIncome += income[i];
+		
+			getTotal += 1;
+			
+		}
+		
+	
+	}
+	getAverage = getTotalIncome/getTotal;
+		
+	/*console.log(getTotalIncome);
+	console.log(getAverage);*/
+	
+	
+// Create our number formatter.
+var formatter = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+  minimumFractionDigits: 2,
+});
+	
+	document.getElementById("output").innerHTML = "The Total amount of income is " + formatter.format(getTotalIncome) + " The average is: "  + formatter.format(getAverage);
+	
+	
+	
+}
+
+	</script>
+	
+	</body>
+
+</html>
